@@ -8,14 +8,16 @@ GEM
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
-    redis (4.2.2)
+    redis (4.1.4)
     ruby2_keywords (0.0.2)
-    sidekiq (6.1.2)
-      connection_pool (>= 2.2.2)
+    sidekiq (5.2.9)
+      connection_pool (~> 2.2, >= 2.2.2)
       rack (~> 2.0)
-      redis (>= 4.2.0)
-    sidekiq-benchmark (0.5.1)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 4.2)
+    sidekiq-benchmark (0.7.0)
       chartkick (>= 1.1.1)
+      sidekiq (~> 5)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -28,7 +30,7 @@ PLATFORMS
 
 DEPENDENCIES
   sidekiq
-  sidekiq-benchmark
+  sidekiq-benchmark (>= 0.7.0)
   sinatra
 
 BUNDLED WITH
